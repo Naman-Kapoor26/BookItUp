@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome library for icons -->
+    <script src="https://kit.fontawesome.com/e3831a00ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>BookItUp</title>
+</head>
+<body onload="PreloadMain()">
+    <div class="preloader col-100" id="preloader">
+        <div class="preloader-main common align flex-col col-100">
+            <img src="assets/images/logos/preload-logo.png" alt="logo">
+            <span class="common">
+                <h1>B</h1>
+                <h1>O</h1>
+                <h1>O</h1>
+                <h1>K</h1>
+                <h1>I</h1>
+                <h1>T</h1>
+                <h1>U</h1>
+                <h1>P</h1>
+            </span>
+        </div>
+    </div>
+    <div class="container col-100" id="container">
+        <div class="main col-100">
+            <header>
+                <div class="navigation common-bet col-100">
+                    <div class="nav-logo common align col-20">
+                        <i class="fa fa-close" onclick="Close()" id="close"></i>
+                        <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                        <i class="fa fa-bars" onclick="Open()" id="bars"></i>
+                    </div>
+                    <div class="nav-links common-even align col-70" id="nav-links">
+                        <li><a href="index.html" style="background: #e84e36;color: #ffffff;">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="myMeetings.html">My Meetings</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="signin.html">Sign in</a></li>
+                        <li><a href="user.html">Profile</a></li> 
+                    </div>
+                </div>
+            </header>
+            <div class="banner col-100 common">
+                <img src="assets/images/banner.jpeg" alt="">
+                <div class="banner-main common flex-col align col-100">
+                    <h1>Integrated Meeting Room Booking System</h1>
+                    <p>Efficiently arrange meetings within seconds, book rooms through purpose-built room displays.</p>
+                    <a href="signin.html">Get Started</a>
+                </div>
+            </div>
+            <div class="home-booking-experience common flex-col align col-100">
+                <div class="home-heading">
+                    <h2>Simplifying meeting room booking experiences</h2>
+                </div>
+                <div class="booking-experience-main common col-100">
+                    <div class="booking-experience-main-left common align col-45">
+                        <img src="assets/images/home/booking-experience.png" alt="booking experience">
+                    </div>
+                    <div class="booking-experience-main-right common-even flex-col col-45">
+                        <div class="exp-one col-100">
+                            <img src="assets/images/home/meeting.png" alt="">
+                            <h4>Schedule meetings via your daily calendar</h4>
+                            <p>Our smart meeting room scheduling software enables staff 
+                                to book rooms through your preferred calendar which syncs 
+                                up with our room displays & dashboard in real-time, saving 
+                                time and eliminating the need for multiple portals.</p>
+                        </div>
+                        <div class="exp-two col-100">
+                            <img src="assets/images/home/email.png" alt="">
+                            <h4>Instant meeting room bookings via “Outlook”</h4>
+                            <p>Use our specially designed meeting room displays to book 
+                                ad-hoc meetings. Leverage our modern conference room scheduling 
+                                software to activate bookings, end meetings or extend them, and 
+                                much more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="daily-calendar col-100">
+                <div class="home-heading common flex-col align">
+                    <h2>We integrate with your daily calendar</h2>
+                    <p>Our smart meeting room booking app integrates with your daily 
+                        calendars like Outlook, ensuring that everything 
+                        is in sync in real-time across your calendar, dashboard and meeting 
+                        room displays.</p>
+                </div>
+                <div class="booking-experience-main common col-100">
+                    <div class="booking-experience-main-right common-even flex-col col-45">
+                        <div class="exp-one col-100">
+                            <img src="assets/images/home/meeting.png" alt="">
+                            <h4>Microsoft Outlook</h4>
+                            <p>Whether you use Microsoft Exchange or Office 365, our 
+                                meeting room booking system integrates with your daily 
+                                use calendar, enabling seamless scheduling.</p>
+                        </div>
+                        <div class="exp-two col-100">
+                            <img src="assets/images/home/email.png" alt="">
+                            <h4>Google calendar</h4>
+                            <p>Empower your Admin and HR champions through our conference 
+                                room scheduling software which saves their precious time by 
+                                integrating with the Google Calendar application.</p>
+                        </div>
+                    </div>
+                    <div class="booking-experience-main-left common align col-45">
+                        <img src="assets/images/home/daily-calendar-1.jpeg" id="daily-cal" alt="booking experience">
+                    </div>
+                </div>
+            </div>
+            <div class="bookitup-features col-100">
+                <div class="home-heading common flex-col align">
+                    <h2>BookItUp Features</h2>
+                    <p>Features that won hearts, and created impact. As we create a 
+                        number of new features, there are some that deserve a 
+                        dedicated mention, for they have created exceptional value for 
+                        our employees.</p>
+                </div>
+                <div class="bookitup-features-main common col-100">
+                    <div class="features-left common align col-40">
+                        <img src="assets/images/home/bookitup-features.png" alt="bookitup">
+                    </div>
+                    <div class="features-right common flex-col col-40">
+                        <span class="common align">
+                            <img src="assets/images/home/next.png" alt="arrow">
+                            <h4>Book meeting room via mobile app</h4>
+                        </span>
+                        <span class="common align">
+                            <img src="assets/images/home/next.png" alt="arrow">
+                            <h4>Integrate with your calendar</h4>
+                        </span>
+                        <span class="common align">
+                            <img src="assets/images/home/next.png" alt="arrow">
+                            <h4>End and Extend meetings</h4>
+                        </span>
+                        <span class="common align">
+                            <img src="assets/images/home/next.png" alt="arrow">
+                            <h4>Multiple connectivity options</h4>
+                        </span>
+                        <span class="common align">
+                            <img src="assets/images/home/next.png" alt="arrow">
+                            <h4>Book meeting room via mobile app</h4>
+                        </span>
+                        <a href="services.html">Discover all Features</a>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer col-100">
+                    <h2>Let's get started!</h2>
+                    <hr>
+                    <div class="footer-links common-bet col-100">
+                        <div class="footer-links-box common flex-col col-25">
+                            <img src="assets/images/logos/logo-white.png" alt="logo">
+                            <a href="mailto:info@bookitup.com"><i class="fa fa-envelope"></i> info@bookitup.com</a>
+                            <a href="tel:+91 9876543210"><i class="fa fa-phone" style="transform: rotate(90deg);"></i> +91 9876543210</a>
+                        </div>
+                        <div class="footer-links-box common flex-col col-25">
+                            <h3>Quick Links</h3>
+                            <a href="about.html">About</a>
+                            <a href="services.html">Services</a>
+                            <a href="contact.html">Contact</a>
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                        <div class="footer-links-box common flex-col col-25">
+                            <h3>Useful Links</h3>
+                            <a href="user.html">Manager Profile</a>
+                            <a href="user.html">Employee Profile</a>
+                            <a href="myMeetings.html">My Meetings</a>
+                        </div>
+                        <div class="footer-links-box common flex-col col-25">
+                            <h3>Social media Links</h3>
+                            <span>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>© BookItUp 2023 All Rights Reserved</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
