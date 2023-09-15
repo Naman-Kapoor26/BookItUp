@@ -5,8 +5,8 @@ Automated Meeting Room Booking System
 - Main aim of the project is to easily manage meetings and send invite to multiple users/employees at same time.
 - This application empowers users to seamlessly handle operations of Meeting Room booking, in a organized manner.
 - With its intuitive interface and robust functionalities, the meeting room booking system serves an optimal solution to efficiently manage events, meeting rooms.
-
-## Highlights
+## FRONTEND
+### Highlights
 - We have taken this project as real client service and designed a good UI for the webpages and designed it using pure HTML, CSS and JavaScript.
 - No libraries are used throughout the code.
 - We have written clean code and reused components in CSS.
