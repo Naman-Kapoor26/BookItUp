@@ -258,3 +258,54 @@ function AdminManage() {
     adminHeading.innerHTML = "Manage Meeting Rooms";
     adminManage.style.animation = 'bannerMoveOne .4s linear forwards';
 }
+
+// Admin Create Meeting Room validation
+function AdminCreateRoomValidation(event) {
+    event.preventDefault();
+    var adminCRName = document.createMeeting.meetname.value;
+    var adminCRCapacity = document.createMeeting.capacity.value;
+    if(adminCRName == 0) {
+        alert("Meeting Room name is invalid");
+        return false;
+    }
+    if(adminCRCapacity == 0) {
+        alert("Meeting Room capacity is invalid");
+        return false;
+    }
+    window.location.replace("success.html");
+}
+
+// Edit Created Meeting Room (ADMIN)
+function OpenEditCreateMeetingRoom() {
+    document.getElementById("edit-meeting-room").style.display = 'flex';
+}
+function CloseEditCreateMeetingRoom() {
+    document.getElementById("edit-meeting-room").style.display = 'none';
+}
+
+// Success message page
+function Success(event) {
+    event.preventDefault();
+    window.location.replace("success.html");
+}
+function SuccessHome(event) {
+    event.preventDefault();
+    window.location.replace("success-home.html");
+}
+
+// Book Meeting Form
+var Book = document.getElementById("book-form");
+function OpenBook() {
+    Book.style.display = 'flex';
+}
+function CloseBook() {
+    Book.style.display = 'none';
+}
+
+var imp = document.getElementById("import-users");
+function OpenImport() {
+    imp.style.display = 'flex';
+}
+function CloseImport() {
+    imp.style.display = 'none';
+}

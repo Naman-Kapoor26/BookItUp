@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome library for icons -->
+    <script src="https://kit.fontawesome.com/e3831a00ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Book Meeting | BookItUp</title>
+</head>
+<body>
+    <div class="book-container col-100">
+        <div class="book-container-main col-100">
+            <div class="book-main col-100">
+                <header>
+                    <div class="navigation common-bet col-100">
+                        <div class="nav-logo common align col-20">
+                            <i class="fa fa-close" onclick="Close()" id="close"></i>
+                            <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                            <i class="fa fa-bars" onclick="Open()" id="bars"></i>
+                        </div>
+                        <div class="nav-links common-even align col-70" id="nav-links">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="myMeeting-manager.html">My Meetings</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="manager.html">Profile</a></li>  
+                            <li><a href="index.html">Logout</a></li>   
+                        </div>
+                    </div>
+                </header>
+                <div class="book-page col-100">
+                    <h2>Available Meeting Rooms</h2>
+                    <div class="book-box-main common-even col-100">
+                        <div class="book-box common flex-col">
+                            <img src="assets/images/admin/meeting-room-2.jpeg" alt="meeting room">
+                            <span>4.5 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></span>
+                            <h3>Seminar Hall</h3>
+                            <p>Capacity - 30</p>
+                            <h4>Amenties</h4>
+                            <li>Projector</li>
+                            <li>Wi-Fi</li>
+                            <li>Coffee Machine</li>
+                            <li>TV</li>
+                            <a href="#" onclick="OpenBook()">Select</a>
+                        </div>
+                        <div class="book-box common flex-col">
+                            <img src="assets/images/admin/meeting-room-3.jpeg" alt="meeting room">
+                            <span>4.7 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></span>
+                            <h3>Conference Hall</h3>
+                            <p>Capacity - 50</p>
+                            <h4>Amenties</h4>
+                            <li>Projector</li>
+                            <li>Wi-Fi</li>
+                            <li>Conference Call Facility</li>
+                            <li>Coffee Machine</li>
+                            <li>TV</li>
+                            <a href="#" onclick="OpenBook()">Select</a>
+                        </div>
+                        <div class="book-box common flex-col">
+                            <img src="assets/images/admin/meeting-room-1.jpeg" alt="meeting room">
+                            <span>4.8 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i></span>
+                            <h3>Business Hall</h3>
+                            <p>Capacity - 70</p>
+                            <h4>Amenties</h4>
+                            <li>Projector</li>
+                            <li>White Board</li>
+                            <li>Coffee Machine</li>
+                            <li>Water Dispenser</li>
+                            <a href="#" onclick="OpenBook()">Select</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-form common align col-100" id="book-form">
+                    <img src="assets/images/close.png" alt="" onclick="CloseBook()">
+                    <form action="" class="common flex-col">
+                        <h2>Book Meeting Room</h2>
+                        <input type="text" name="meetName" placeholder="Meeting Name" required>
+                        <input type="text" name="organized" placeholder="Organized By" required>
+                        <label for="meetdate">Meeting Date</label>
+                        <input type="date" required>
+                        <label for="startTime">Start Time</label>
+                        <input type="time" required>
+                        <label for="endTime">End Time</label>
+                        <input type="time" required>
+                        <label for="type">Type of Meeting</label>
+                        <select name="type" id="type" required>
+                            <option value="select">Select</option>
+                            <option value="Classroom Training">Classroom Training</option>
+                            <option value="Online Training">Online Training</option>
+                            <option value="Conference Call">Conference Call</option>
+                            <option value="Business">Business</option>
+                        </select>
+                        <p onclick="OpenImport()">Import Users</p>
+                        <label for="desc">Meeting Description</label>
+                        <textarea name="desc" id="desc" cols="30" rows="3" required></textarea>
+                        <input type="submit" value="Book Meeting">
+                    </form>
+                    <div class="import-users common flex-col" style="justify-content: flex-start;" id="import-users">
+                        <p onclick="CloseImport()">Close</p>
+                        <span>
+                            <input type="checkbox">
+                            <label for="emp">Alex (BIU2864)</label>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <label for="emp">Jack (BIU3847)</label>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <label for="emp">Fllen (BIU9854)</label>
+                        </span>
+                        <span>
+                            <input type="checkbox">
+                            <label for="emp">Peter (BIU6723)</label>
+                        </span>
+                        <h4 onclick="CloseImport()">Submit</h4>
+                    </div>
+                </div>
+                <!-- Sticky chat support icon -->
+                <div class="support">
+                    <a onclick="SupportOpen()"><img src="assets/images/support.png" id="s-open" alt="support"></a>
+                    <a onclick="SupportClose()"><img src="assets/images/close.png" id="s-close" alt="support"></a>
+                </div>
+                <footer>
+                    <div class="footer col-100">
+                        <h2>Let's get started!</h2>
+                        <hr>
+                        <div class="footer-links common-bet col-100">
+                            <div class="footer-links-box common flex-col col-25">
+                                <img src="assets/images/logos/logo-white.png" alt="logo">
+                                <a href="mailto:info@bookitup.com"><i class="fa fa-envelope"></i> info@bookitup.com</a>
+                                <a href="tel:+91 9876543210"><i class="fa fa-phone" style="transform: rotate(90deg);"></i> +91 9876543210</a>
+                            </div>
+                            <div class="footer-links-box common flex-col col-25">
+                                <h3>Quick Links</h3>
+                                <a href="about.html">About</a>
+                                <a href="services.html">Services</a>
+                                <a href="contact.html">Contact</a>
+                            </div>
+                            <div class="footer-links-box common flex-col col-25">
+                                <h3>Useful Links</h3>
+                                <a href="manager.html">Manager Profile</a>
+                                <a href="user.html">Employee Profile</a>
+                                <a href="myMeetings.html">My Meetings</a>
+                            </div>
+                            <div class="footer-links-box common flex-col col-25">
+                                <h3>Social media Links</h3>
+                                <span>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                        <hr>
+                        <p>© BookItUp 2023 All Rights Reserved</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div class="support-form common col-100" id="support-form">
+            <div class="support-form-main common align col-100">
+                <form action="" name="support" class="common flex-col col-30" onsubmit="return SupportValidate()">
+                    <label for="fname">Full Name</label>
+                    <input type="text" name="fname" id="fname">
+                    <label for="empid">Employee ID</label>
+                    <input type="text" name="empid" id="empid">
+                    <label for="mail">Email</label>
+                    <input type="email" name="mail" id="mail">
+                    <label for="query">Your Query</label>
+                    <textarea name="query" id="query" cols="30" rows="4"></textarea>
+                    <input type="submit" value="Raise Ticket">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

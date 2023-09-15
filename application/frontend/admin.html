@@ -33,7 +33,7 @@
                 </div>
                 <div class="admin-right-main col-100">
                     <div class="admin-renders col-100">
-                        <div class="admin-dashboard col-100" id="admin-dashboard" style="display: none;">
+                        <div class="admin-dashboard col-100" id="admin-dashboard">
                             <div class="admin-dashboard-main common-even col-100">
                                 <div class="admin-db-left">
                                     <h3>Meeting Rooms</h3>
@@ -41,20 +41,28 @@
                                         <img src="assets/images/admin/meeting-room-1.jpeg" alt="">
                                         <h4>Seminar Hall</h4>
                                         <p>Capacity : 70</p>
-                                        <!-- <span>
-                                            <i class="fa fa-trash"></i>
-                                            <i class="fa fa-edit"></i>
-                                        </span> -->
+                                        <div class="common-even">
+                                            <a href="#" onclick="OpenEditCreateMeetingRoom()">Edit</a>
+                                            <a href="#" onclick="Success(event)">Delete</a>
+                                        </div>
                                     </div>
                                     <div class="admin-meeting-box col-100">
                                         <img src="assets/images/admin/meeting-room-2.jpeg" alt="">
                                         <h4>Conference Room</h4>
                                         <p>Capacity : 40</p>
+                                        <div class="common-even">
+                                            <a href="#" onclick="OpenEditCreateMeetingRoom()">Edit</a>
+                                            <a href="#" onclick="Success(event)">Delete</a>
+                                        </div>
                                     </div>
                                     <div class="admin-meeting-box col-100">
                                         <img src="assets/images/admin/meeting-room-3.jpeg" alt="">
-                                        <h4>Seminar Hall</h4>
+                                        <h4>Business Hall</h4>
                                         <p>Capacity : 90</p>
+                                        <div class="common-even">
+                                            <a href="#" onclick="OpenEditCreateMeetingRoom()">Edit</a>
+                                            <a href="#" onclick="Success(event)">Delete</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="admin-db-right common-bet flex-col">
@@ -224,17 +232,43 @@
                             <div class="admin-history-main common-even col-100">
                                 <div class="admin-hist-box">
                                     <img src="assets/images/admin/meeting-room-1.jpeg" alt="meeting">
+                                    <h3>Booked By : BIU2123 (Alex)</h3>
+                                    <h4>Date : 16/09/2023</h4>
+                                    <p>From : 09:30 AM</p>
+                                    <p>To : 11:00 AM</p>
+                                    <p>Meeting ID: ZXC123</p>
+                                    <h5>Upcoming</h5>
                                 </div>
                                 <div class="admin-hist-box">
                                     <img src="assets/images/admin/meeting-room-2.jpeg" alt="meeting">
+                                    <h3>Booked By : BIU5231 (Peter)</h3>
+                                    <h4>Date : 13/09/2023</h4>
+                                    <p>From : 02:00 PM</p>
+                                    <p>To : 03:00 PM</p>
+                                    <p>Meeting ID: MNB9872</p>
+                                    <h5>Completed</h5>
                                 </div>
                                 <div class="admin-hist-box">
                                     <img src="assets/images/admin/meeting-room-3.jpeg" alt="meeting">
+                                    <h3>Booked By : BIU4586 (Jack)</h3>
+                                    <h4>Date : 11/09/2023</h4>
+                                    <p>From : 10:00 AM</p>
+                                    <p>To : 11:00 AM</p>
+                                    <p>Meeting ID: RKF3233</p>
+                                    <h5>Completed</h5>
                                 </div>
-                                <div class="admin-hist-box"></div>
+                                <div class="admin-hist-box">
+                                    <img src="assets/images/admin/meeting-room-1.jpeg" alt="meeting">
+                                    <h3>Booked By : BIU4586 (Jack)</h3>
+                                    <h4>Date : 10/09/2023</h4>
+                                    <p>From : 12:00 PM</p>
+                                    <p>To : 01:00 PM</p>
+                                    <p>Meeting ID: RKF3233</p>
+                                    <h5>Completed</h5>
+                                </div>
                             </div>
                         </div>
-                        <div class="admin-manage col-100 common" id="admin-manage" style="display: block;">
+                        <div class="admin-manage col-100 common" id="admin-manage">
                             <div class="admin-manage-main common-even col-100">
                                 <div class="admin-create col-45">
                                     <h3>Create Meeting Room</h3>
@@ -243,11 +277,11 @@
                                         <input type="number" name="capacity" placeholder="Seating Capacity">
                                         <p>Amenties</p>
                                         <span>
-                                            <input type="checkbox" value="Projector" checked>
+                                            <input type="checkbox" value="Projector" checked disabled>
                                             <label for="proj">Projector</label>
                                         </span>
                                         <span>
-                                            <input type="checkbox" value="Screen" checked>
+                                            <input type="checkbox" value="Screen" checked disabled>
                                             <label for="proj">Wi-Fi Connection</label>
                                         </span>
                                         <span>
@@ -270,17 +304,54 @@
                                             <input type="checkbox" value="Conference Call Facility">
                                             <label for="proj">Conference Call Facility</label>
                                         </span>
-                                        <input type="submit" value="Create">
+                                        <input type="submit" value="Create" onclick="AdminCreateRoomValidation(event)">
                                     </form>
-                                </div>
-                                <div class="admin-created-meetings col-45">
-                                    <h3>Manage Meeting Rooms</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="edit-meeting-room common align col-100" id="edit-meeting-room">
+        <img src="assets/images/close.png" alt="close" onclick="CloseEditCreateMeetingRoom()">
+        <div class="admin-create col-45">
+            <h3>Edit Meeting Room</h3>
+            <form action="" class="common flex-col">
+                <input type="text" name="meetname" value="Seminar Hall" placeholder="Meeting Room Name">
+                <input type="number" name="capacity" value="70" placeholder="Seating Capacity">
+                <p>Amenties</p>
+                <span>
+                    <input type="checkbox" value="Projector" checked>
+                    <label for="proj">Projector</label>
+                </span>
+                <span>
+                    <input type="checkbox" value="Screen" checked>
+                    <label for="proj">Wi-Fi Connection</label>
+                </span>
+                <span>
+                    <input type="checkbox" value="Coffee Machine">
+                    <label for="proj">Coffee Machine</label>
+                </span>
+                <span>
+                    <input type="checkbox" value="White Board">
+                    <label for="proj">White Board</label>
+                </span>
+                <span>
+                    <input type="checkbox" value="TV">
+                    <label for="proj">TV</label>
+                </span>
+                <span>
+                    <input type="checkbox" value="Water Dispenser">
+                    <label for="proj">Water Dispenser</label>
+                </span>
+                <span>
+                    <input type="checkbox" value="Conference Call Facility">
+                    <label for="proj">Conference Call Facility</label>
+                </span>
+                <input type="submit" value="Create" onclick="Success(event)">
+            </form>
         </div>
     </div>
     <script src="assets/js/script.js"></script>

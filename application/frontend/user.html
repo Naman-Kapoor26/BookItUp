@@ -20,16 +20,69 @@
                         <i class="fa fa-bars" onclick="Open()" id="bars"></i>
                     </div>
                     <div class="nav-links common-even align col-70" id="nav-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="myMeetings.html">My Meetings</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="signin.html">Login</a></li>
-                        <li><a href="user.html" style="background: #e84e36;color: #ffffff;">Profile</a></li>     
+                        <li><a href="user.html" style="background: #e84e36;color: #ffffff;">Profile</a></li>  
+                        <li><a href="index.html">Logout</a></li>   
                     </div>
                 </div>
             </header>
+            <div class="user-profile col-100">
+                <div class="user-profile-main col-100">
+                    <div class="user-profile-box common-even col-100">
+                        <div class="user-details common flex-col align col-30">
+                            <img src="assets/images/employee.jpeg" alt="employee">
+                            <h5>Online</h5>
+                            <span>
+                                <p>Name:</p>
+                                <p>Alex</p>
+                            </span>
+                            <span>
+                                <p>Employee ID:</p>
+                                <p>BIU2134</p>
+                            </span>
+                            <span>
+                                <p>Email:</p>
+                                <p>alex@gmail.com</p>
+                            </span>
+                            <span>
+                                <p>Phone:</p>
+                                <p>+91 9876543210</p>
+                            </span>
+                            <span>
+                                <p>Location:</p>
+                                <p>London, UK</p>
+                            </span>
+                        </div>
+                        <div class="user-stats common align flex-col col-30">
+                            <h3>Statistics</h3>
+                            <span>
+                                <h4>Meetings Joined</h4>
+                                <p>23</p>
+                            </span>
+                            <span>
+                                <h4>Meetings Rejected</h4>
+                                <p>08</p>
+                            </span>
+                            <span>
+                                <h4>Last Login</h4>
+                                <p>16-09-2023 04:30 PM</p>
+                            </span>
+                            <br>
+                            <h3>My Meetings</h3>
+                            <a href="myMeetings.html">Manage</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sticky chat support icon -->
+            <div class="support">
+                <a onclick="SupportOpen()"><img src="assets/images/support.png" id="s-open" alt="support"></a>
+                <a onclick="SupportClose()"><img src="assets/images/close.png" id="s-close" alt="support"></a>
+            </div>
             <footer>
                 <div class="footer col-100">
                     <h2>Let's get started!</h2>
@@ -45,12 +98,11 @@
                             <a href="about.html">About</a>
                             <a href="services.html">Services</a>
                             <a href="contact.html">Contact</a>
-                            <a href="#">Terms & Conditions</a>
-                            <a href="#">Privacy Policy</a>
+                            
                         </div>
                         <div class="footer-links-box common flex-col col-25">
                             <h3>Useful Links</h3>
-                            <a href="user.html">Manager Profile</a>
+                            <a href="manager.html">Manager Profile</a>
                             <a href="user.html">Employee Profile</a>
                             <a href="myMeetings.html">My Meetings</a>
                         </div>
@@ -69,6 +121,20 @@
                 </div>
             </footer>
         </div>
+        <div class="support-form common col-100" id="support-form">
+            <div class="support-form-main common align col-100">
+                <form action="" name="support" class="common flex-col col-30" onsubmit="return SupportValidate()">
+                    <label for="fname">Full Name</label>
+                    <input type="text" name="fname" id="fname">
+                    <label for="empid">Employee ID</label>
+                    <input type="text" name="empid" id="empid">
+                    <label for="mail">Email</label>
+                    <input type="email" name="mail" id="mail">
+                    <label for="query">Your Query</label>
+                    <textarea name="query" id="query" cols="30" rows="4"></textarea>
+                    <input type="submit" value="Raise Ticket">
+                </form>
+            </div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>

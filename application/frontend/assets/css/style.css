@@ -1049,7 +1049,7 @@ font-family: 'Lato', sans-serif;
     overflow: auto;
 }
 .admin-meeting-box {
-    height: 300px;
+    height: auto;
     margin-top: 15px;
     padding: 13px;
     border-radius: 10px;
@@ -1065,6 +1065,21 @@ font-family: 'Lato', sans-serif;
     color: #000000;
     font-size: 20px;
     letter-spacing: .4px;
+}
+.admin-meeting-box div a {
+    width: 100px;
+    margin: 10px 0;
+    padding: 4px 15px;
+    color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+}
+.admin-meeting-box div a:nth-child(1) {
+    background: #313131;
+}
+.admin-meeting-box div a:nth-child(2) {
+    background: #ff0000;
 }
 .admin-accounts-main {
     overflow: auto;
@@ -1164,7 +1179,7 @@ font-family: 'Lato', sans-serif;
 }
 .admin-hist-box {
     width: 370px;
-    height: 400px;
+    height: 415px;
     padding: 1pc;
     border-radius: 10px;
     background: #ff9484;
@@ -1173,6 +1188,23 @@ font-family: 'Lato', sans-serif;
     width: 100%;
     height: auto;
     border-radius: 10px;
+}
+.admin-hist-box h3,
+.admin-hist-box h4 {
+    /* color: green; */
+    letter-spacing: .4px;
+    font-weight: 500;
+}
+.admin-hist-box h5 {
+    color: green;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .4px;
+}
+.admin-hist-box p {
+    font-weight: 500;
+    color: #555555;
+    letter-spacing: .4px;
 }
 .admin-create,
 .admin-created-meetings {
@@ -1185,8 +1217,10 @@ font-family: 'Lato', sans-serif;
     padding: 8px;
     margin: 10px 0;
     outline: 0;
+    border: 0;
     border-radius: 5px;
-    border: 2px solid #a8a8a8;
+    background: #e6e6e6;
+    /* border: 2px solid #a8a8a8; */
 }
 .admin-create form input[type="submit"] {
     border: 0;
@@ -1200,7 +1234,278 @@ font-family: 'Lato', sans-serif;
 .admin-create form span {
     width: 50%;
 }
-
+.admin-created-meetings {
+    overflow: auto;
+}
+#edit-meeting-room {
+    display: none;
+}
+.edit-meeting-room {
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.178);
+}
+.edit-meeting-room img {
+    position: absolute;
+    width: 70px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+.edit-meeting-room {
+    position: absolute;
+    height: 100vh;
+    z-index: 50;
+    top: 0;
+}
+/* -------------------- Success Page ------------------ */
+.success {
+    height: 100vh;
+}
+.success-box {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    animation: bannerMove .4s linear forwards;
+    box-shadow: 2px 2px 10px 2px #b6b6b6;
+}
+.success-box img {
+    width: 100px;
+}
+.success-box h2 {
+    color: #555555;
+    font-weight: 600;
+}
+.success-box p {
+    margin: 1pc 0;
+}
+.success-box a {
+    color: green;
+    padding: 5px 40px;
+    border-radius: 20px;
+    border: 2px solid green;
+    text-decoration: none;
+}
+.success-box a:hover {
+    background: green;
+    color: #ffffff;
+    transition: .3s;
+}
+/* ---------------------- User ---------------------- */
+.user-profile-main {
+    padding: 2pc;
+}
+.user-profile-box {
+    height: 600px;
+    padding: 2pc 0;
+    margin-top: 100px;
+    border-radius: 10px;
+    background: #909090;
+}
+.user-details,
+.user-stats {
+    border-radius: 10px;
+    background: #ffffff;
+}
+.user-details h2 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.user-details img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px 2px #a8a8a8;
+}
+.user-details h5 {
+    font-weight: 600;
+    color: green;
+    margin: 10px 0;
+    font-size: 18px;
+}
+.user-details span {
+    width: 100%;
+    display: flex;
+    font-weight: 500;
+    padding: 0 4pc;
+    line-height: 35px;
+    letter-spacing: .4px;
+    justify-content: flex-start;
+}
+.user-details span p:nth-child(1) {
+    color: #e84e36;
+}
+.user-details span p:nth-child(2) {
+    margin-left: 5px;
+}
+.user-stats h3 {
+    font-weight: 600;
+    color: #e84e36;
+    margin-bottom: 10px;
+}
+.user-stats span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.user-stats span h4 {
+    font-weight: 600;
+}
+.user-stats a {
+    color: #ffffff;
+    padding: 7px 40px;
+    border-radius: 6px;
+    background-color: #e84e36;
+    text-decoration: none;
+}
+.user-stats a:hover {
+    transition: .3s;
+    background: #a13929;
+}
+/* --------------------- Book Meetings ----------------------- */
+.book-page {
+    height: auto;
+    margin-top: 100px;
+    padding: 2pc;
+}
+.book-page h2 {
+    font-weight: 500;
+    color: #e84e36;
+    letter-spacing: .6px;  
+}
+.book-box-main {
+    flex-wrap: wrap;
+    row-gap: 2pc;
+    margin-top: 1pc;
+}
+.book-box {
+    width: 370px;
+    height: 550px;
+    flex-wrap: wrap;
+    padding: 1pc;
+    border-radius: 10px;
+    background: #ff9484;
+}
+.book-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.book-box h3 {
+    font-weight: 600;
+    font-size: 23px;
+}
+.book-box h4 {
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+.book-box p {
+    font-weight: 500;
+    color: #555555;
+}
+.book-box span {
+    margin-top: 10px;
+}
+.book-box span i {
+    color: #ffc400;
+}
+.book-box a {
+    width: 100%;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: 2px solid #000000;
+}
+.book-box a:hover {
+    color: #ffffff;
+    transition: .3s;
+    background: #000000;
+}
+.book-form {
+    position: absolute;
+    top: 100px;
+    padding: 2pc 0;
+    height: auto;
+    backdrop-filter: blur(7px);
+    background: rgba(0, 0, 0, 0.164);
+}
+#book-form {
+    display: none;
+}
+.book-form form {
+    width: 400px;
+    height: 600px;
+    padding: 1pc;
+    border-radius: 10px;
+    background: #e84e36;
+}
+.book-form img {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    cursor: pointer;
+}
+.book-form form input,
+.book-form form select,
+.book-form form textarea {
+    outline: 0;
+    padding: 7px;
+    margin: 5px 0;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+.book-form form input[type="submit"] {
+    background: #000;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+.book-form form input[type="submit"]:hover {
+    transition: .3s;
+    background: #313131;
+}
+.book-form form p {
+    text-align: center;
+    background: #727272;
+    color: #fff;
+    padding: 5px 0;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.import-users {
+    position: absolute;
+    width: 380px;
+    height: 400px;
+    padding: 1pc;
+    line-height: 35px;
+    background: #fff;
+}
+#import-users {
+    display: none;
+}
+.import-users p {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: red;
+    cursor: pointer;
+}
+.import-users p:hover {
+    text-decoration: underline;
+}
+#book-book {
+    color: #ffffff;
+    padding: 7px 30px;
+    border-radius: 7px;
+    background: #e84e36;
+    text-decoration: none;
+}
 /* -------------------- Keyframes animations -------------------- */
 @keyframes banner {
     0% {
