@@ -23,3 +23,7 @@ Automated Meeting Room Booking System
   - Employee profile — Email : user@gmail.com   , Password : user
   - Manager profile — Email : manager@gmail.com  , Password : manager
   - Admin profile — Email : admin@gmail.com   , Password : admin
+### Instruction to be followed to execute backend in local
+- Go to /application/backend folder
+- Enter the commands in the view-controller layer.
+- Access the com.hsbc.controller and enter the file name.
